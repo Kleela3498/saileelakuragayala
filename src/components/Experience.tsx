@@ -23,6 +23,7 @@ const Experience: React.FC = () => {
     {
       title: "Software Engineer",
       company: "S & S Fashions Inc.",
+      companyLogo: "/assets/S & S Logo.jpg",
       period: "Aug 2025 - Present",
       duration: "1 month",
       employmentType: "Full-Time",
@@ -37,7 +38,7 @@ const Experience: React.FC = () => {
     {
       title: "Software Development Engineer",
       company: "DBS Bank Ltd.",
-      companyLogo: "/assets/DBSlogo.jpg",
+      companyLogo: "/assets/DBS_Bank_Logo_(alternative).svg.png",
       period: "Aug 2022 - Nov 2023",
       duration: "1 year 4 months",
       employmentType: "Full-Time",
@@ -51,6 +52,7 @@ const Experience: React.FC = () => {
     {
       title: "Software Development Engineer",
       company: "Ericsson Inc.",
+      companyLogo: "/assets/Ericsson_logo.png",
       period: "Mar 2022 - Aug 2022",
       duration: "6 months",
       employmentType: "Full-Time",
@@ -90,19 +92,23 @@ const Experience: React.FC = () => {
               <div key={index} className={`experience-item ${index % 2 === 0 ? 'left' : 'right'}`}>
                 <div className="experience-content">
                   <div className="experience-header">
-                    <h3 className="experience-title">{exp.title}</h3>
-                    {index % 2 !== 0 && (
-                      <div className="experience-additional-info">
+                    <div className="experience-left-content">
+                      <h3 className="experience-title">{exp.title}</h3>
+                      <div className="employment-info">
                         <div className="employment-type">{exp.employmentType}</div>
-                        <div className="employment-duration">{exp.duration}</div>
+                        <div className="experience-location">
+                          <span className="location-icon">📍</span>
+                          <span className="location-text">Onsite</span>
+                        </div>
+                      </div>
+                    </div>
+                    {exp.companyLogo && (
+                      <div className="experience-company-logo">
+                        <img src={exp.companyLogo} alt={exp.company} />
                       </div>
                     )}
                   </div>
-                  {exp.companyLogo ? (
-                    <div className="experience-company-logo">
-                      <img src={exp.companyLogo} alt={exp.company} />
-                    </div>
-                  ) : (
+                  {!exp.companyLogo && (
                     <h4 className="experience-company">{exp.company}</h4>
                   )}
                   <span className="experience-period">{exp.period}</span>

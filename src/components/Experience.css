@@ -88,15 +88,118 @@
   text-shadow: 0 0 5px rgba(191, 0, 255, 0.5);
 }
 
-.experience-company-logo {
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 0.5rem;
 }
 
+.experience-left-content {
+  flex: 1;
+}
+
+.experience-left-content .experience-title {
+  margin-bottom: 0.5rem;
+}
+
+.experience-left-content .employment-type {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #bf00ff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.employment-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.experience-location {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(191, 0, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(191, 0, 255, 0.3);
+}
+
+.location-icon {
+  font-size: 0.8rem;
+}
+
+.location-text {
+  font-size: 0.8rem;
+  color: #bf00ff;
+  font-weight: 500;
+}
+
+.experience-company-logo {
+  margin-left: 1rem;
+  flex-shrink: 0;
+  position: relative;
+  padding: 8px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, transparent, rgba(191, 0, 255, 0.1), transparent);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  animation: neonGlow 3s ease-in-out infinite alternate;
+}
+
+.experience-company-logo::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #bf00ff, #8000ff, #00ffff, #ff00ff, #bf00ff);
+  background-size: 200% 200%;
+  border-radius: 12px;
+  z-index: -1;
+  animation: gradientShift 2s linear infinite;
+  opacity: 0.8;
+}
+
 .experience-company-logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
   object-fit: contain;
-  filter: brightness(1.1) contrast(1.1);
+  filter: brightness(1.2) contrast(1.1) drop-shadow(0 0 8px rgba(191, 0, 255, 0.3));
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+@keyframes neonGlow {
+  0% {
+    box-shadow: 
+      0 0 10px rgba(191, 0, 255, 0.4),
+      0 0 20px rgba(191, 0, 255, 0.2),
+      inset 0 0 10px rgba(191, 0, 255, 0.1);
+  }
+  100% {
+    box-shadow: 
+      0 0 20px rgba(191, 0, 255, 0.8),
+      0 0 40px rgba(191, 0, 255, 0.4),
+      inset 0 0 20px rgba(191, 0, 255, 0.2);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .experience-period {
@@ -107,43 +210,7 @@
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  margin-bottom: 1rem;
   box-shadow: 0 0 10px rgba(191, 0, 255, 0.3);
-}
-
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-}
-
-.experience-additional-info {
-  margin: 0;
-  padding: 0.5rem 0.8rem;
-  background: rgba(191, 0, 255, 0.1);
-  border-radius: 8px;
-  border-left: 3px solid #bf00ff;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  min-width: 120px;
-}
-
-.employment-type {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #bf00ff;
-  margin-bottom: 0.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.employment-duration {
-  font-size: 0.9rem;
-  color: #e0e0e0;
-  font-weight: 500;
 }
 
 .experience-description {
