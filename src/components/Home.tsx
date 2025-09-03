@@ -89,7 +89,7 @@ const Home: React.FC = () => {
         <h1 className="home-title neon-text">Hi, I'm Sai Leela Kuragayala</h1>
         <h2 className="home-subtitle neon-text-secondary">Software Engineer</h2>
         <p className="home-description">
-          I build high-traffic, cloud-native web applications optimized for scalability, performance, and real-time analytics, blending frontend creativity with backend robustness.
+          I build high-traffic, cloud-native web applications optimized for scalability, performance, and real-time analytics, blending frontend creativity with backend robustness
         </p>
         
         {/* Social Media Icons */}
