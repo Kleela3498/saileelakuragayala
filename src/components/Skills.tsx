@@ -7,34 +7,34 @@ const Skills: React.FC = () => {
 
   const skillCategories = [
     {
-      title: "Languages & Core",
+      title: "Programming Languages & Core",
       color: "cyan",
-      skills: ["Python", "R", "C++", "JavaScript", "SQL", "TypeScript", "CUDA"]
+      skills: ["Python", "Java", "JavaScript", "TypeScript", "C++", "GO", "SQL"]
     },
     {
-      title: "ML/DL Frameworks", 
-      color: "magenta",
-      skills: ["PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "Hugging Face", "Keras"]
-    },
-    {
-      title: "Computer Vision",
-      color: "green", 
-      skills: ["OpenCV", "YOLO", "MediaPipe", "Image Segmentation", "Object Detection"]
-    },
-    {
-      title: "Cloud",
-      color: "orange",
-      skills: ["SageMaker", "GCP Vertex AI", "Docker", "Kubernetes", "Terraform", "MLflow"]
-    },
-    {
-      title: "NLP & LLMs",
-      color: "purple",
-      skills: ["LangChain", "spaCy", "NLTK", "RAG/CAG/KAG", "Transformers", "GPT", "BERT"]
-    },
-    {
-      title: "Web Development", 
+      title: "Web Development & Frameworks",
       color: "yellow",
-      skills: ["React", "Node.js", "FastAPI", "Flask", "REST APIs", "GraphQL", "MongoDB"]
+      skills: ["React.js", "Angular", "Node.js", "Flask", "Django", "FastAPI", "GraphQL", "REST APIs", "Tailwind CSS", "SEO"]
+    },
+    {
+      title: "Databases & Data Management",
+      color: "green",
+      skills: ["PostgreSQL", "MongoDB", "SQLite", "Redis", "PyMongo", "Database Management", "Tableau", "Scalable Architecture"]
+    },
+    {
+      title: "Cloud & DevOps",
+      color: "orange",
+      skills: ["AWS (Lambda, CloudWatch, SageMaker, QuickSight)", "GCP", "Azure", "Docker", "Kubernetes", "Terraform", "MLflow", "CI/CD Pipelines", "Serverless Computing"]
+    },
+    {
+      title: "Machine Learning, DL & Computer Vision",
+      color: "magenta",
+      skills: ["PyTorch", "TensorFlow", "Scikit-learn", "PyTorch", "Keras", "Hugging Face"]
+    },
+    {
+      title: "NLP, LLMs & Data Analytics",
+      color: "purple",
+      skills: ["LangChain", "spaCy", "NLTK", "GPT", "BERT", "Pandas", "NumPy"]
     }
   ];
 

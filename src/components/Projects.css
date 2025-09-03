@@ -3,30 +3,6 @@
   background: transparent;
 }
 
-.projects-category {
-  margin-bottom: 2rem;
-}
-
-.projects-category:last-child {
-  margin-bottom: 0;
-}
-
-.category-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 15px rgba(191, 0, 255, 0.5);
-}
-
-.category-title.active {
-  color: #00ff88;
-  text-shadow: 
-    0 0 15px rgba(0, 255, 136, 0.6),
-    0 0 30px rgba(0, 255, 136, 0.4);
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -108,6 +84,61 @@
   border-color: rgba(191, 0, 255, 0.3);
 }
 
+/* Unique border colors for each theme */
+.project-card.cyan:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(0, 255, 255, 0.4),
+    0 0 50px rgba(0, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.4);
+}
+
+.project-card.magenta:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(191, 0, 255, 0.4),
+    0 0 50px rgba(191, 0, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(191, 0, 255, 0.4);
+}
+
+.project-card.orange:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(255, 136, 0, 0.4),
+    0 0 50px rgba(255, 136, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 136, 0, 0.4);
+}
+
+.project-card.green:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(0, 255, 136, 0.4),
+    0 0 50px rgba(0, 255, 136, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 255, 136, 0.4);
+}
+
+.project-card.purple:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(128, 0, 255, 0.4),
+    0 0 50px rgba(128, 0, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(128, 0, 255, 0.4);
+}
+
+.project-card.red:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(255, 0, 68, 0.4),
+    0 0 50px rgba(255, 0, 68, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 0, 68, 0.4);
+}
+
 .project-card.active {
   border-color: rgba(0, 255, 136, 0.3);
   box-shadow: 
@@ -127,6 +158,30 @@
   overflow: hidden;
   position: relative;
   z-index: 2;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.project-img.openai-logo {
+  object-fit: contain;
+  object-position: center;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 8px 12px;
+  max-width: 105%;
+  max-height: 100%;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.1);
 }
 
 .image-placeholder {
@@ -159,6 +214,48 @@
   text-shadow: 0 0 10px rgba(191, 0, 255, 0.3);
 }
 
+.project-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.active-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #00ff88;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+  white-space: nowrap;
+}
+
+.active-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: pulse-green 2s infinite;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(0, 255, 136, 0.8);
+    transform: scale(1.1);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+    transform: scale(1);
+  }
+}
+
 .project-description {
   color: #e0e0e0;
   line-height: 1.5;
@@ -182,13 +279,133 @@
   font-weight: 500;
   border: 1px solid rgba(191, 0, 255, 0.3);
   box-shadow: 0 0 5px rgba(191, 0, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
-.tech-tag.active {
-  background: rgba(0, 255, 136, 0.2);
+.tech-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(191, 0, 255, 0.4);
+}
+
+/* Cyan theme */
+.tech-tag.cyan {
+  background: rgba(0, 255, 255, 0.15);
+  color: #00ffff;
+  border-color: rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+.tech-tag.cyan:hover {
+  background: rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+/* Magenta theme */
+.tech-tag.magenta {
+  background: rgba(191, 0, 255, 0.15);
+  color: #bf00ff;
+  border-color: rgba(191, 0, 255, 0.3);
+  box-shadow: 0 0 5px rgba(191, 0, 255, 0.2);
+}
+
+.tech-tag.magenta:hover {
+  background: rgba(191, 0, 255, 0.25);
+  box-shadow: 0 0 8px rgba(191, 0, 255, 0.4);
+}
+
+/* Orange theme */
+.tech-tag.orange {
+  background: rgba(255, 136, 0, 0.15);
+  color: #ff8800;
+  border-color: rgba(255, 136, 0, 0.3);
+  box-shadow: 0 0 5px rgba(255, 136, 0, 0.2);
+}
+
+.tech-tag.orange:hover {
+  background: rgba(255, 136, 0, 0.25);
+  box-shadow: 0 0 8px rgba(255, 136, 0, 0.4);
+}
+
+/* Green theme */
+.tech-tag.green {
+  background: rgba(0, 255, 136, 0.15);
   color: #00ff88;
   border-color: rgba(0, 255, 136, 0.3);
   box-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+}
+
+.tech-tag.green:hover {
+  background: rgba(0, 255, 136, 0.25);
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+/* Purple theme */
+.tech-tag.purple {
+  background: rgba(128, 0, 255, 0.15);
+  color: #8000ff;
+  border-color: rgba(128, 0, 255, 0.3);
+  box-shadow: 0 0 5px rgba(128, 0, 255, 0.2);
+}
+
+.tech-tag.purple:hover {
+  background: rgba(128, 0, 255, 0.25);
+  box-shadow: 0 0 8px rgba(128, 0, 255, 0.4);
+}
+
+/* Red theme */
+.tech-tag.red {
+  background: rgba(255, 0, 68, 0.15);
+  color: #ff0044;
+  border-color: rgba(255, 0, 68, 0.3);
+  box-shadow: 0 0 5px rgba(255, 0, 68, 0.2);
+}
+
+.tech-tag.red:hover {
+  background: rgba(255, 0, 68, 0.25);
+  box-shadow: 0 0 8px rgba(255, 0, 68, 0.4);
+}
+
+/* Active tech tags with color themes */
+.tech-tag.active.cyan {
+  background: rgba(0, 255, 255, 0.25);
+  color: #00ffff;
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.tech-tag.active.magenta {
+  background: rgba(191, 0, 255, 0.25);
+  color: #bf00ff;
+  border-color: rgba(191, 0, 255, 0.4);
+  box-shadow: 0 0 8px rgba(191, 0, 255, 0.3);
+}
+
+.tech-tag.active.orange {
+  background: rgba(255, 136, 0, 0.25);
+  color: #ff8800;
+  border-color: rgba(255, 136, 0, 0.4);
+  box-shadow: 0 0 8px rgba(255, 136, 0, 0.3);
+}
+
+.tech-tag.active.red {
+  background: rgba(255, 0, 68, 0.25);
+  color: #ff0044;
+  border-color: rgba(255, 0, 68, 0.4);
+  box-shadow: 0 0 8px rgba(255, 0, 68, 0.3);
+}
+
+.tech-tag.active.purple {
+  background: rgba(128, 0, 255, 0.25);
+  color: #8000ff;
+  border-color: rgba(128, 0, 255, 0.4);
+  box-shadow: 0 0 8px rgba(128, 0, 255, 0.3);
+}
+
+.tech-tag.active.green {
+  background: rgba(0, 255, 136, 0.25);
+  color: #00ff88;
+  border-color: rgba(0, 255, 136, 0.4);
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
 }
 
 .project-links {
@@ -218,9 +435,10 @@
 }
 
 .project-link.github {
-  background: transparent;
-  color: #333;
-  border: 2px solid #333;
+  background: linear-gradient(135deg, #555 0%, #333 100%);
+  color: #ffffff;
+  border: 2px solid #666;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
 }
 
 .project-link.live.active {
@@ -229,14 +447,17 @@
 }
 
 .project-link.github {
-  background: transparent;
-  color: #333;
-  border: 2px solid #333;
+  background: linear-gradient(135deg, #555 0%, #333 100%);
+  color: #ffffff;
+  border: 2px solid #666;
+  box-shadow: 0 0 5px rgba(102, 102, 102, 0.3);
 }
 
 .project-link.github:hover {
-  background: #333;
+  background: linear-gradient(135deg, #666 0%, #444 100%);
   color: white;
+  box-shadow: 0 0 10px rgba(102, 102, 102, 0.5);
+  transform: translateY(-2px);
 }
 
 .project-link.live.active {
@@ -250,14 +471,179 @@
 }
 
 .project-link.github.active {
-  background: transparent;
-  color: #00ff88;
+  background: linear-gradient(135deg, #00cc66 0%, #00aa55 100%);
+  color: #ffffff;
   border: 2px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
 .project-link.github.active:hover {
-  background: #00ff88;
+  background: linear-gradient(135deg, #00e673 0%, #00cc66 100%);
   color: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Cyan theme buttons */
+.project-link.live.cyan {
+  background: linear-gradient(135deg, #00ffff 0%, #00cccc 100%);
+  color: #001a1a;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.project-link.live.cyan:hover {
+  background: linear-gradient(135deg, #33ffff 0%, #00e6e6 100%);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-link.github.cyan {
+  background: linear-gradient(135deg, #00cccc 0%, #009999 100%);
+  color: #ffffff;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.project-link.github.cyan:hover {
+  background: #00ffff;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Magenta theme buttons */
+.project-link.live.magenta {
+  background: linear-gradient(135deg, #bf00ff 0%, #9900cc 100%);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(191, 0, 255, 0.3);
+}
+
+.project-link.live.magenta:hover {
+  background: linear-gradient(135deg, #d633ff 0%, #b300e6 100%);
+  box-shadow: 0 0 15px rgba(191, 0, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-link.github.magenta {
+  background: linear-gradient(135deg, #9900cc 0%, #7700aa 100%);
+  color: #ffffff;
+  border: 2px solid #bf00ff;
+  box-shadow: 0 0 10px rgba(191, 0, 255, 0.3);
+}
+
+.project-link.github.magenta:hover {
+  background: #bf00ff;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(191, 0, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Orange theme buttons */
+.project-link.live.orange {
+  background: linear-gradient(135deg, #ff8800 0%, #cc6600 100%);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 136, 0, 0.3);
+}
+
+.project-link.live.orange:hover {
+  background: linear-gradient(135deg, #ff9933 0%, #e67300 100%);
+  box-shadow: 0 0 15px rgba(255, 136, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-link.github.orange {
+  background: linear-gradient(135deg, #cc6600 0%, #aa5500 100%);
+  color: #ffffff;
+  border: 2px solid #ff8800;
+  box-shadow: 0 0 10px rgba(255, 136, 0, 0.3);
+}
+
+.project-link.github.orange:hover {
+  background: #ff8800;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(255, 136, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Green theme buttons */
+.project-link.live.green {
+  background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+  color: #001a0f;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.project-link.live.green:hover {
+  background: linear-gradient(135deg, #33ff99 0%, #00e673 100%);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-link.github.green {
+  background: linear-gradient(135deg, #00cc66 0%, #00aa55 100%);
+  color: #ffffff;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.project-link.github.green:hover {
+  background: #00ff88;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Purple theme buttons */
+.project-link.live.purple {
+  background: linear-gradient(135deg, #8000ff 0%, #6600cc 100%);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(128, 0, 255, 0.3);
+}
+
+.project-link.live.purple:hover {
+  background: linear-gradient(135deg, #9933ff 0%, #7300e6 100%);
+  box-shadow: 0 0 15px rgba(128, 0, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-link.github.purple {
+  background: linear-gradient(135deg, #6600cc 0%, #5500aa 100%);
+  color: #ffffff;
+  border: 2px solid #8000ff;
+  box-shadow: 0 0 10px rgba(128, 0, 255, 0.3);
+}
+
+.project-link.github.purple:hover {
+  background: #8000ff;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(128, 0, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Red theme buttons */
+.project-link.live.red {
+  background: linear-gradient(135deg, #ff0044 0%, #cc0033 100%);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 0, 68, 0.3);
+}
+
+.project-link.live.red:hover {
+  background: linear-gradient(135deg, #ff3366 0%, #e6003d 100%);
+  box-shadow: 0 0 15px rgba(255, 0, 68, 0.5);
+  transform: translateY(-2px);
+}
+
+.project-link.github.red {
+  background: linear-gradient(135deg, #cc0033 0%, #aa0028 100%);
+  color: #ffffff;
+  border: 2px solid #ff0044;
+  box-shadow: 0 0 10px rgba(255, 0, 68, 0.3);
+}
+
+.project-link.github.red:hover {
+  background: #ff0044;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 0, 68, 0.4);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -280,6 +666,22 @@
   
   .project-title {
     font-size: 1rem;
+  }
+  
+  .project-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .active-indicator {
+    font-size: 0.7rem;
+    gap: 0.25rem;
+  }
+  
+  .active-dot {
+    width: 6px;
+    height: 6px;
   }
   
   .project-description {
@@ -321,6 +723,17 @@
   
   .project-title {
     font-size: 1.1rem;
+  }
+  
+  .project-title-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  
+  .active-indicator {
+    font-size: 0.65rem;
+    gap: 0.2rem;
   }
   
   .project-description {
@@ -378,6 +791,13 @@
     height: 160px;
   }
   
+  .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
   .project-content {
     padding: 1.2rem;
   }
@@ -414,6 +834,13 @@
     height: 240px;
   }
   
+  .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
   .project-content {
     padding: 2.5rem;
   }
@@ -440,6 +867,13 @@
   
   .project-image {
     height: 120px;
+  }
+  
+  .project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   
   .project-content {

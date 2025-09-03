@@ -137,23 +137,20 @@
 
 /* Updated Github Link and Icon */
 .social-icon.github {
-  border-color: #333;
+  border-color: #ffffff;
   color: #ffffff; /* Changed to white icon */
   box-shadow: 
-    0 0 15px rgba(51, 51, 51, 0.4),
-    inset 0 0 15px rgba(51, 51, 51, 0.1);
+    0 0 15px rgba(255, 255, 255, 0.4),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .social-icon.github:hover {
-  background: rgba(51, 51, 51, 0.15);
+  background: rgba(255, 255, 255, 0.15);
   box-shadow: 
-    0 0 25px rgba(51, 51, 51, 0.6),
-    0 0 40px rgba(51, 51, 51, 0.4),
-    inset 0 0 20px rgba(51, 51, 51, 0.2);
+    0 0 25px rgba(255, 255, 255, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
   transform: translateY(-5px) scale(1.05);
   color: #ffffff;
 }
 
-.contact-link.github {
-  href: "https://github.com/Kleela3498"; /* Updated Github link */
-}
