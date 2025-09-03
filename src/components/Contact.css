@@ -1,0 +1,159 @@
+.contact-section {
+  padding: 60px 0;
+  background: transparent;
+  color: white;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info-card {
+  background: rgba(15, 15, 25, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(191, 0, 255, 0.2);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(191, 0, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contact-info-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-info-card:hover::before {
+  transform: translateX(100%);
+}
+
+.contact-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(191, 0, 255, 0.3),
+    0 0 40px rgba(191, 0, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(191, 0, 255, 0.3);
+}
+
+.contact-info {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(191, 0, 255, 0.3);
+}
+
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+}
+
+.contact-link {
+  color: #bf00ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-link:hover {
+  color: #00ffff;
+  border-bottom-color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Updated Github Link and Icon */
+.social-icon.github {
+  border-color: #333;
+  color: #ffffff; /* Changed to white icon */
+  box-shadow: 
+    0 0 15px rgba(51, 51, 51, 0.4),
+    inset 0 0 15px rgba(51, 51, 51, 0.1);
+}
+
+.social-icon.github:hover {
+  background: rgba(51, 51, 51, 0.15);
+  box-shadow: 
+    0 0 25px rgba(51, 51, 51, 0.6),
+    0 0 40px rgba(51, 51, 51, 0.4),
+    inset 0 0 20px rgba(51, 51, 51, 0.2);
+  transform: translateY(-5px) scale(1.05);
+  color: #ffffff;
+}
+
+.contact-link.github {
+  href: "https://github.com/Kleela3498"; /* Updated Github link */
+}
