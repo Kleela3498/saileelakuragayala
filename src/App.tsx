@@ -20,6 +20,9 @@ function App() {
         <Projects />
         <Contact />
       </main>
+      <footer className="footer">
+        © {new Date().getFullYear()} Sai Leela Kuragayala. All rights reserved.
+      </footer>
     </div>
   );
 }
