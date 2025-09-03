@@ -46,7 +46,7 @@ const Experience: React.FC = () => {
         "Designed and built a scalable feature for a multi-tiered test automation platform that orchestrated 50,000+ distributed workflows with real-time monitoring, aligning with cloud integration standards to enhance customer onboarding and system reliability using Python.",
         "Engineered distributed indexing and traceability systems to improve search result accuracy and enable real-time diagnostics, reducing debugging latency by 35% and reinforcing mission-critical data integrity.",
         "Implemented a scalable Redis caching layer that lowered database query loads by 60%, bolstering performance for real-time customer-facing analytics in high traffic cloud environments.",
-        "Guided junior engineers in agile methodologies and Scrum practices, standardizing user story creation which reduced inconsistencies by 30% and supported cross-team collaboration."
+        "Mentored junior engineers in agile methodologies and Scrum practices, standardizing user story creation which reduced inconsistencies by 30% and supported cross-team collaboration."
       ]
     },
     {
