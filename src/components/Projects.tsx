@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
       technologies: ["Python", "NLP", "APIs", "Bot Framework", "Machine Learning"],
       image: "/assets/NJIT Highlander.jpg", // Corrected image reference
       liveLink: "https://devpost.com/software/njit-highlander-bot?ref_content=my-projects-tab&ref_feature=my_projects",
-      githubLink: "#",
+    githubLink: "https://github.com/Kleela3498/njit-chatbot",
       type: "completed"
     },
     {
