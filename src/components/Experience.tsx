@@ -36,7 +36,7 @@ const Experience: React.FC = () => {
       ]
     },
     {
-      title: "Software Development Engineer",
+      title: "Associate Software Engineer",
       company: "Ericsson Inc.",
       companyLogo: "/assets/Ericsson_logo.png",
       period: "Mar 2022 - Aug 2022",
@@ -64,7 +64,7 @@ const Experience: React.FC = () => {
       ]
     },
     {
-      title: "Software Engineering",
+      title: "Software Engineering ",
       company: "Creatik Solutions.",
       period: "Nov 2018 - May 2019",
       duration: "7 months",
