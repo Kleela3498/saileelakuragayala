@@ -20,21 +20,7 @@ const Experience: React.FC = () => {
   }, []);
 
   const experiences = [
-    {
-      title: "Software Engineer",
-      company: "S & S Fashions Inc.",
-      companyLogo: "/assets/S & S Logo.jpg",
-      period: "Aug 2025 - Present",
-      duration: "1 month",
-      employmentType: "Full-Time",
-      description: [
-        "Designed and maintained scalable web applications with focus on performance, reliability, and security for wholesale apparel operations.",
-        "Collaborated with the AI team to integrate AI-driven solutions into workflows, enhancing automation and operational efficiency.",
-        "Contributed to the digital transformation of e-commerce systems, aligning software with real-world business needs.",
-        "Gained hands-on experience with Python, cloud technologies, and DevOps practices including version control, testing, and CI/CD pipelines.",
-        "Participated in code reviews, debugging, and deployment processes under senior mentorship to reinforce industry best practices."
-      ]
-    },
+    // ...S & S Fashions Inc. experience removed...
     {
       title: "Software Development Engineer",
       company: "DBS Bank Ltd.",
