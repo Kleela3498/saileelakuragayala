@@ -49,6 +49,21 @@ const Experience: React.FC = () => {
       ]
     },
     {
+      title: "Software Engineer",
+      company: "Cybrowse Digital Solutions Pvt Ltd",
+      companyLogo: "/assets/CybrowseLogo.png",
+      period: "Jul 2020 – Feb 2022",
+      duration: "1 year 8 months",
+      employmentType: "Full-Time",
+      description: [
+        "Designed and maintained backend services to deliver scalable and reliable application performance.",
+        "Built and integrated APIs to support client-facing dashboards and enable seamless data exchange.",
+        "Contributed to the migration of legacy modules into microservices, improving maintainability and deployment efficiency.",
+        "Streamlined release cycles by implementing automated workflows and reducing manual errors.",
+        "Participated in code reviews, debugging, and testing to reinforce quality and industry best practices."
+      ]
+    },
+    {
       title: "Software Engineering",
       company: "Creatik Solutions.",
       period: "Nov 2018 - May 2019",
